@@ -1,0 +1,208 @@
+// ==================================================
+// Variables
+// ==================================================
+
+// --------------------------------------------------
+// Global Variables
+// --------------------------------------------------
+
+// Colors
+// --------------------------------------------------
+$color-orange-red: #ff7000 !default;
+$color-light-red:  #ffdecf !default;
+
+$color-white:        #fff !default;
+$color-black:        #000 !default;
+$color-dark-gray:    #5f5f5f !default; // For text.
+$color-gray:         #a2a2a2 !default; // For note.
+$color-light-gray:   #dbdbdb !default; // For border.
+$color-lighter-gray: #efefef !default; // For background.
+
+// Font family
+// --------------------------------------------------
+$font-family-sans-serif: "Helvetica Neue", Helvetica, "Segoe UI", Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei", sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, SimSimSun, serif; //FangSong, STFangSong
+$font-family-monospace:  Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+// Font weight
+// --------------------------------------------------
+$font-weight-heavier: 500 !default; // For title or button text.
+$font-weight-normal:  400 !default; // For text.
+
+// Font size
+// --------------------------------------------------
+$font-size-larger: 20px !default;
+$font-size-title:  17px !default; // For bar-nav title.
+$font-size-large:  16px !default; // For title.
+$font-size-base:   14px !default; // For text.
+$font-size-small:  12px !default; // For note.
+
+$font-size-h1: 36px !default;
+$font-size-h2: 30px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: $font-size-base !default; // 14px
+$font-size-h6: $font-size-small !default; // 12px
+
+// By default, this inherits from the `<body>`.
+// --------------------------------------------------
+$heading-font-family: inherit !default;
+$heading-font-weight: $font-weight-heavier !default;
+$heading-line-height: 1 !default;
+$heading-color:       inherit !default;
+$heading-small-color: $color-gray;
+
+// Settings for some of the most global styles.
+// --------------------------------------------------
+$body-bg:    #fff !default;
+$content-bg: #fff !default;
+
+$line-height-base:    20px !default;
+$line-height-small:   18px !default;
+$line-height-smaller: 16px !default;
+
+$divider-height: 10px !default;
+$divider-bg: $color-lighter-gray !default;
+
+$gray-title-height: 30px !default;
+
+$two-section-bar-height: 40px !default;
+
+$modal-padding: 10px !default;
+$action-modal-btn-height: 40px !default;
+
+// Transitions
+// --------------------------------------------------
+$duration: 0.25s !default;
+$timing-function: cubic-bezier(.1,.5,.1,1) !default; // Inspired by @c2prods
+
+// Borders
+// --------------------------------------------------
+$border-width-default: 1px !default;
+$border-default: $border-width-default solid $color-light-gray;
+$border-dashed:  $border-width-default dashed $color-light-gray;
+
+$border-primary: $border-width-default solid $color-orange-red;
+$border-dark: $border-width-default solid $color-gray;
+
+$border-radius-base:  3px !default;
+$border-radius-large: 5px !default;
+
+// --------------------------------------------------
+// Components Variables
+// --------------------------------------------------
+
+// Bars
+// --------------------------------------------------
+$bar-font-size:    $font-size-large !default;
+$bar-height-base:  44px !default;
+$bar-tab-height:   50px !default;
+$bar-side-spacing: 10px !default;
+$bar-nav-color: #fff !default;
+$bar-nav-bg: $color-orange-red !default;
+$bar-header-secondary-height: 30px !default;
+
+// Grids
+// --------------------------------------------------
+$grid-column:       12 !default;
+$grid-gutter-base:  10px !default;
+$grid-gutter-large: $grid-gutter-base * 2 !default;
+
+// Forms
+// --------------------------------------------------
+$form-group-height: 40px !default;
+$form-group-bg: $color-white !default;
+
+// Cards
+// --------------------------------------------------
+$card-bg: #fff !default;
+
+// Buttons
+// --------------------------------------------------
+// Each block contains the
+//             (name,          width, height,fonts-size, color, background, border).
+$buttons-list: ("primary",      100%, 40px, 17px, $color-white, $color-orange-red, none),
+               ("plain",        100%, 40px, 14px, $color-orange-red, $color-white, $border-primary),
+               ("royal",        60px, 24px, 14px, $color-orange-red, $color-light-red, none),
+               ("abandon",      60px, 24px, 14px, $color-dark-gray, $color-lighter-gray, none),
+               ("tiny-plain", 65px, 20px, 12px, $color-orange-red, $color-white, $border-primary),
+               ("tiny-info",    65px, 20px, 12px, #8bb4ff, $color-white, 1px solid #8bb4ff),
+               ("tiny-warning", 65px, 20px, 12px, $color-gray, $color-white, $border-dark);
+
+// List
+// --------------------------------------------------
+$list-margin-top:  10px !default;
+$list-height-base: 40px !default;
+$list-gutter:      10px !default;
+
+// Menu
+// --------------------------------------------------
+$menu-gutter: 15px !default;
+$menu-padding: 10px !default;
+
+$inline-remind-menu-height: 70px !default;
+
+// Banner
+// --------------------------------------------------
+$banner-height: 110px !default;
+$banner-color: $color-white !default;
+$car-brand-img-size: 35px !default;
+
+// Tip
+// --------------------------------------------------
+$remind-tip-size: 18px !default;
+
+// Checkbox
+// --------------------------------------------------
+$checkbox-size: 20px !default;
+
+// Toast
+// --------------------------------------------------
+$toast-border-radius: 10px !default;
+
+// Toast
+// --------------------------------------------------
+$confirm-width: 200px !default;
+$confirm-row-height: 40px !default;
+
+// --------------------------------------------------
+// Customize Variables
+// --------------------------------------------------
+$shop-gutter: 10px !default;
+$shop-photo-size: 80px !default;
+$shop-extra-height: 40px !default;
+
+$my-car-height: 60px !default;
+
+$car-plane-graph-padding: 30px !default;
+$car-plane-graph-width: 85% !default;
+$car-plane-graph-height: 100% !default;
+$car-legend-margin: 10px !default;
+$car-legend-color: $color-gray !default;
+$zoom-btn-size: 50px !default;
+
+$order-list-type-height: 30px !default;
+
+$recommend-service-title-height: 40px !default;
+
+$timeline-height: 50px !default;
+$timeline-list-padding: 6px !default;
+$timeline-list-width: percentage(8 / 3);
+$timeline-item-width: percentage(1 / 8);
+$timeline-btn-width: 25px !default;
+$timeline-btn-height: 50px !default;
+
+$appoint-time-row-height: 40px !default;
+$appoint-time-list-height: $appoint-time-row-height * 5 !default;
+
+$coupon-list-height: 200px !default;
+$coupon-gutter: 10px !default;
+
+$appoint-item-col-padding: 25px !default;
+$car-condition-report-height: 88px !default;
+$appoint-link-list-item-height: 49px !default;
+
+$appoint-time-list-width: percentage(8 / 1) !default;
+$appoint-day-time-width:  percentage(1 / 8) !default;
+
+$consultant-head-size: 80px !default;

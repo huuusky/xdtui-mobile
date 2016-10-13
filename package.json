@@ -1,0 +1,25 @@
+{
+  "name": "xdtui-mobile",
+  "version": "1.0.0",
+  "description": "The light ui for XingDeTong mobile or wechart.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui",
+    "mobile"
+  ],
+  "author": "LiKun",
+  "license": "ISC"
+}

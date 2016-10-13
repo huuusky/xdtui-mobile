@@ -1,0 +1,35 @@
+// ==================================================
+// Toast
+// ==================================================
+
+.toast {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+  z-index: 22;
+
+  &.active {
+    display: block;
+  }
+}
+
+.toast-content {
+  display: inline-block;
+  position: relative;
+  top: 75%;
+  padding: $grid-gutter-base;
+  min-width: 100px;
+  max-width: 80%;
+  height: auto;
+  background-color: rgba(0, 0, 0, .9);
+  border-radius: $toast-border-radius ;
+}
+
+.toast-text {
+  color: $color-white;
+}

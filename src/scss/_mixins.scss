@@ -1,0 +1,161 @@
+// ==================================================
+// Mixins
+// ==================================================
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+// --------------------------------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table; // 2
+    content: " "; // 1
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Center-align a block level element
+// --------------------------------------------------
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Box shadow
+// --------------------------------------------------
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// CSS image replacement
+//
+// Heads up! v3 launched with only `.hide-text()`, but per our pattern for
+// mixins being reused as classes with the same name, this doesn't hold up. As
+// of v3.0.1 we have added `.text-hide()` and deprecated `.hide-text()`.
+//
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+
+// Deprecated as of v3.0.1 (has been removed in v4)
+@mixin text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin flex-center-middle-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-justify-center-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+// --------------------------------------------------
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Placeholder text
+// --------------------------------------------------
+@mixin placeholder($color: $color-gray) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+// Gradients
+// --------------------------------------------------
+@mixin linear-gradient($color-from, $color-to) {
+  background-color: $color-from; // Old browsers
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color-from), color-stop(100%, $color-to)); // Chrome, Safari4+
+  background-image: -webkit-linear-gradient(top, $color-from 0%, $color-to 100%); // Chrome10+, Safari5.1+
+  background-image: -moz-linear-gradient(top, $color-from 0%, $color-to 100%); // FF3.6+
+  background-image: linear-gradient(to bottom, $color-from 0%, $color-to 100%); // W3C
+}
+
+@mixin directional-gradient($color-from, $color-to, $deg: 45deg) {
+  background-color: $color-from; // Old browsers
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, $color-from), color-stop(100%, $color-to)); // Chrome, Safari4+
+  background-image: -webkit-linear-gradient($deg, $color-from 0%, $color-to 100%); // Chrome10+, Safari5.1+
+  background-image: -moz-linear-gradient($deg, $color-from 0%, $color-to 100%); // FF3.6+
+  background-image: linear-gradient($deg, $color-from 0%, $color-to 100%); // W3C
+}
+
+// Transforms
+// --------------------------------------------------
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transition: $transform;
+  transform: $transform;
+}
+
+// Transitions
+// --------------------------------------------------
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin transition-timing-function($function...) {
+  -webkit-transition-timing-function: $function;
+  -moz-transition-timing-function: $function;
+  transition-timing-function: $function;
+}
+
+// Animations
+// --------------------------------------------------
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  animation-direction: $direction;
+}

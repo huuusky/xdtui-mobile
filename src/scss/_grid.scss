@@ -1,0 +1,100 @@
+// ==================================================
+// Grid system
+// ==================================================
+
+// Grid row
+// --------------------------------------------------
+.row {
+  padding: $grid-gutter-base;
+
+  &.horizontal-padded-large {
+    padding: {
+      left: $grid-gutter-large;
+      right: $grid-gutter-large;
+    }
+  }
+
+  &.vertical-padded-small {
+    padding: {
+      top: $grid-gutter-base / 2;
+      bottom: $grid-gutter-base / 2;
+    };
+  }
+
+  &.no-horizontal-padding {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.no-vertical-padding {
+    padding: {
+      top: 0;
+      bottom: 0;
+    };
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  overflow: hidden;
+  @include clearfix;
+}
+
+// Grid col
+// --------------------------------------------------
+.col {
+  position: relative;
+  float: left;
+
+  &.padded {
+    padding: $grid-gutter-base;
+  }
+
+  &.left-padded {
+    padding-left: $grid-gutter-base;
+  }
+
+  &.horizontal-padded {
+    padding: {
+      left: $grid-gutter-base;
+      right: $grid-gutter-base;
+    };
+  }
+
+  &.vertical-padded {
+    padding: {
+      top: $grid-gutter-base;
+      bottom: $grid-gutter-base;
+    };
+  }
+
+  &.vertical-padded-large {
+    padding: {
+      top: $grid-gutter-large;
+      bottom: $grid-gutter-large;
+    };
+  }
+
+  &.vertical-padded-small {
+    padding: {
+      top: $grid-gutter-base / 2;
+      bottom: $grid-gutter-base / 2;
+    };
+  }
+}
+
+//  Created grid col and col offset in the loop
+// --------------------------------------------------
+@for $i from 1 through $grid-column {
+  $percent: percentage(100 / $grid-column * $i / 100);
+  .col-#{$i} {
+    width: $percent;
+  }
+
+  .col-offset-#{$i} {
+    margin-left: $percent;
+  }
+}

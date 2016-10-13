@@ -1,0 +1,51 @@
+// ==================================================
+// Form
+// ==================================================
+
+.form-group {
+  height: $form-group-height;
+  background-color: $form-group-bg;
+  border: $border-default;
+  border-radius: $border-radius-large;
+
+  .col {
+    line-height: $line-height-small;
+  }
+}
+
+.form-label {
+  font-weight: $font-weight-heavier;
+  line-height: $line-height-base;
+}
+
+.form-input {
+  width: 100%;
+  line-height: $line-height-small;
+  color: inherit;
+  outline: none;
+  text-indent: $grid-gutter-base;
+  border: $border-default;
+  border-radius: $border-radius-base;
+  @include placeholder;
+
+  &.no-border {
+    border: none;
+  }
+}
+
+.form-checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: $line-height-base;
+  vertical-align: middle;
+}
+
+.province-select {
+  color: inherit;
+  outline: none;
+  line-height: $line-height-small;
+  border: $border-primary;
+  border-radius: $border-radius-base;
+}
+

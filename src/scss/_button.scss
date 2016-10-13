@@ -1,0 +1,53 @@
+// ==================================================
+// Button
+// ==================================================
+
+.btn {
+  display: block;
+  padding: {
+    top: 0;
+    bottom: 0;
+  };
+  text-align: center;
+  font-weight: $font-weight-heavier;
+  -webkit-appearance: none;
+  outline: none; // Remove buttons border after clicked.
+  border-radius: $border-radius-base;
+
+  &.disabled,
+  &[disabled] {
+    color: $color-dark-gray;
+    border: $border-default;
+    background-color: $color-light-gray;
+  }
+
+  &.inline {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@each $name, $width, $height, $font-size, $color, $background, $border in $buttons-list {
+  .btn-#{$name} {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    font-size: $font-size;
+    color: $color;
+    background-color: $background;
+    border: $border;
+
+    &:active,
+    &.active {
+      color: darken($color, 5%);
+      background-color: darken($background, 5%);
+    }
+
+    &.disabled.active,
+    &.disabled:active {
+      color: $color-dark-gray;
+      background-color: $color-light-gray;
+    }
+  }
+}
+

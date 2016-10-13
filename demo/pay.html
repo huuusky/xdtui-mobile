@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>pay</title>
+    <link rel="stylesheet" href="../dist/stylesheets/xdtui-mobile.css">
+</head>
+<body>
+<header class="bar bar-nav">
+    <a href="#my" class="icon icon-left-nav pull-left"></a>
+    <h4 class="title">订 单 支 付</h4>
+</header>
+<div class="content">
+    <div class="pay-order-info">
+        <div class="row">行得通保养订单</div>
+        <div class="row vertical-padded-small">
+            <div class="col col-3 vertical-padded-small">订单编号：</div>
+            <div class="col col-9 vertical-padded-small">1889156696</div>
+            <div class="col col-3 vertical-padded-small">支付金额：</div>
+            <div class="col col-9 vertical-padded-small price">5855元</div>
+        </div>
+        <div class="row pay-countdown">
+            <img src="../dist/images/order/pay-countdown.png" width="18">
+            <span>支付剩余时间  23时59分59秒</span>
+        </div>
+    </div>
+    <!--<div class="gray-title">请 使 用 微 信 支 付</div>-->
+    <div class="payment">
+        <button class="btn btn-primary" id="payment-btn">微 信 支 付</button>
+    </div>
+</div>
+</body>
+</html>

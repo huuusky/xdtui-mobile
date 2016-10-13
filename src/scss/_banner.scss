@@ -1,0 +1,29 @@
+.banner {
+  height: $banner-height;
+  background-image: url("../images/my/select-car-bg.png");
+  background-size: 100%;
+  overflow: hidden;
+}
+
+.banner-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include flex-center-middle-layout;
+}
+
+.banner-content {
+  color: $banner-color;
+  font-weight: $font-weight-heavier;
+
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .car-brand-img {
+    width: $car-brand-img-size;
+    height: $car-brand-img-size;
+    vertical-align: middle;
+    border-radius: $border-radius-base;
+  }
+}

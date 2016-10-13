@@ -1,0 +1,92 @@
+// ==================================================
+// Index Menu
+// ==================================================
+
+// Normal menu
+// --------------------------------------------------
+.menu {
+  margin: $menu-gutter $menu-gutter 0 $menu-gutter;
+
+  .menu-row {
+    padding-bottom: $menu-gutter;
+    overflow: hidden;
+    @include clearfix;
+  }
+
+  .menu-cell {
+    position: relative;
+    float: left;
+    width: 50%;
+
+    &:nth-child(1) {
+      padding-right: $menu-gutter / 2;
+    }
+    &:nth-child(2) {
+      padding-left: $menu-gutter / 2;
+    }
+  }
+
+  .menu-btn {
+    display: block;
+    padding: $menu-padding 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid $color-orange-red;
+    border-radius: $border-radius-large;
+
+    &:active,
+    &.active {
+      background-color: darken($color-white, 5%);
+    }
+  }
+
+  .menu-title {
+    font-size: $font-size-large;
+    color: $color-orange-red;
+    line-height: $line-height-base;
+    font-weight: $font-weight-heavier;
+  }
+
+  .menu-desc {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+  }
+}
+
+// Inline menu
+// --------------------------------------------------
+.inline-remind-menu {
+  background-color: $color-white;
+
+  .remind-tip {
+    position: absolute;
+    right: 15px;
+    width: $remind-tip-size;
+    height: $remind-tip-size;
+    line-height: $remind-tip-size;
+    font-size: $font-size-small;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-orange-red;
+    border-radius: 50%;
+  }
+
+  .col {
+    height: $inline-remind-menu-height;
+    line-height: $inline-remind-menu-height;
+    border-right: $border-default;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+
+
+

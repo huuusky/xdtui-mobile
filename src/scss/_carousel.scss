@@ -1,0 +1,33 @@
+// ==================================================
+// Slider
+// ==================================================
+
+// Outer wrapper for carousel
+// --------------------------------------------------
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+
+  // Inner wrapper for carousel (width of all slides together)
+  .carousel-group {
+    position: relative;
+    font-size: 0; // Remove spaces from inline-block children
+    white-space: nowrap;
+    @include transition(all 0s linear);
+
+    // Individual slide
+    .carousel-item {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      vertical-align: top; // Ensure that li always aligns to top
+    }
+  }
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}

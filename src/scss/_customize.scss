@@ -1,0 +1,726 @@
+// ==================================================
+// Customize
+// ==================================================
+
+// --------------------------------------------------
+// Login page.
+// --------------------------------------------------
+.login-form {
+  margin-top: $grid-gutter-base * 5;
+}
+
+.login-countdown-btn {
+  display: none;
+}
+
+// --------------------------------------------------
+// Paint & metal-plate page.
+// --------------------------------------------------
+
+// My car
+// --------------------------------------------------
+.my-car {
+  .link-list-item {
+    height: $my-car-height;
+  }
+
+  .list-right-nav {
+    color: $color-orange-red;
+  }
+
+  .default-car-label {
+    display: inline-block;
+    padding: 0 $grid-gutter-base / 2;
+    height: 26px;
+    line-height: 26px;
+    color: $color-orange-red;
+    border: $border-primary;
+    border-radius: $border-radius-base;
+  }
+}
+
+// Car plane graph
+// --------------------------------------------------
+.car-plane-graph {
+  @include flex-center-middle-layout;
+  position: relative;
+  padding: $car-plane-graph-padding 0;
+  border-bottom: $border-default;
+
+  .zoom-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: $zoom-btn-size;
+    height: $zoom-btn-size;
+    background: url("../images/paint/car-zoom.png") center no-repeat;
+    background-size: 24px 30px;
+
+    &.zoomed {
+      background-image: url("../images/paint/car-reduce.png");
+    }
+  }
+}
+
+.car-svg {
+  width: $car-plane-graph-width;
+  height: $car-plane-graph-height;
+}
+
+.car-legend {
+  > span {
+    position: absolute;
+    color: $car-legend-color;
+  }
+
+  .top,
+  .bottom {
+    left: calc(50% - 1em / 2);
+  }
+  .left,
+  .right {
+    top: 50%;
+  }
+  .top {
+    top: $car-legend-margin;
+  }
+  .right {
+    right: $car-legend-margin;
+  }
+  .bottom {
+    bottom: $car-legend-margin;
+  }
+  .left {
+    left: $car-legend-margin;
+  }
+}
+
+// Car part list
+// --------------------------------------------------
+.car-part-list {
+  .col {
+    &:active,
+    &.active {
+      background-color: darken($color-white, 5%);
+    }
+
+    &.selected {
+      .checkbox {
+        background-image: url("../images/common/checkbox-checked.png");
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.svg-part[name=C] {
+  transform: scale(1);
+  transform-origin: center 20%;
+  transition: transform 0.25s;
+}
+.svg-part[name=M] {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+.svg-part[name=C].zoom {
+  transform: scale(1.2, 2);
+}
+.svg-part[name=M].zoom {
+  transform: scale(1.2, 2);
+}
+.svg-part[name=P],
+.svg-part[name=Q],
+.svg-part[name=S],
+.svg-part[name=V] {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+.svg-part[name=P],
+.svg-part[name=Q],
+.svg-part[name=S],
+.svg-part[name=V] {
+  &.zoom {
+    transform: scale(2, 2.5);
+  }
+}
+.svg-part[name=O],
+.svg-part[name=N] {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+.svg-part[name=O],
+.svg-part[name=N] {
+  &.zoom {
+    transform: scaleX(2);
+  }
+}
+.svg-part[name=R],
+.svg-part[name=U],
+.svg-part[name=T],
+.svg-part[name=W] {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+.svg-part[name=R],
+.svg-part[name=U],
+.svg-part[name=T],
+.svg-part[name=W] {
+  &.zoom {
+    transform: scaleX(1.5);
+  }
+}
+
+// --------------------------------------------------
+// Shop list page.
+// --------------------------------------------------
+
+// Shop
+// --------------------------------------------------
+.shop {
+  padding: 0 $shop-gutter;
+  margin-top: $shop-gutter;
+  background-color: $color-white;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  img,
+  span {
+    vertical-align: top;
+  }
+
+  .shop-photo {
+    width: $shop-photo-size;
+    height: $shop-photo-size;
+    border: $border-default;
+    border-radius: $border-radius-base;
+  }
+
+  .shop-name {
+    font-size: $font-size-base;
+  }
+
+  .shop-address,
+  .shop-comment {
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+
+  .shop-star-level {
+    margin-top: 4px;
+  }
+
+  .shop-type {
+    margin-top: 2px;
+    display: inline-block;
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    font-size: $font-size-small;
+    color: $color-gray;
+    text-align: center;
+    background-color: $color-light-gray;
+    border-radius: $border-radius-base;
+  }
+
+  .support-payment {
+    margin-top: 1px;
+  }
+
+  .shop-extra {
+    height: $shop-extra-height;
+    border-top: $border-default;
+    @include flex-justify-center-layout;
+  }
+
+  .money {
+  }
+
+  .gift {
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+}
+
+// --------------------------------------------------
+// Order page
+// --------------------------------------------------
+
+// Shop info
+// --------------------------------------------------
+.shop-info {
+  padding: 0 $shop-gutter;
+  background-color: $color-white;
+  .shop-name-group {
+    font-size: $font-size-base;
+    font-weight: $font-weight-heavier;
+    border-bottom: $border-default;
+  }
+  .shop-other-group {
+    padding: $shop-gutter / 2 0;
+    font-size: $font-size-small;
+    color: $color-gray;
+  }
+}
+
+// Service info
+// --------------------------------------------------
+.service-info {
+  padding: 0 $grid-gutter-base;
+  margin-top: $grid-gutter-base;
+  background-color: $color-white;
+
+  .title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-heavier;
+    border-bottom: $border-default;
+  }
+}
+
+// Recommend service
+// --------------------------------------------------
+.recommend-service {
+  margin-top: $grid-gutter-base;
+  padding: 0 $grid-gutter-base;
+  background-color: $color-white;
+}
+
+.recommend-service-title {
+  padding-right: $grid-gutter-base;
+  height: $recommend-service-title-height;
+  line-height: $recommend-service-title-height;
+  @include flex-justify-center-layout;
+
+  .icon {
+    font-size: $font-size-base;
+    color: $color-gray;
+  }
+
+  &:active {
+    background-color: darken($color-white, 5%);
+  }
+}
+
+.recommend-service-content {
+  border-top: $border-default;
+}
+
+// User info
+// --------------------------------------------------
+.user-info {
+  padding-bottom: $grid-gutter-base;
+  margin-top: $grid-gutter-base;
+  background-color: $color-white;
+
+  .row {
+    .col:last-child {
+      border-bottom: $border-default;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Appoint time
+// --------------------------------------------------
+
+// Timeline
+// --------------------------------------------------
+.timeline {
+  position: relative;
+  overflow: hidden;
+
+  .timeline-btn {
+    position: absolute;
+    top: 0;
+    width: $timeline-btn-width;
+    height: $timeline-btn-height;
+    z-index: 10;
+  }
+
+  .timeline-left-btn {
+    left: 0;
+  }
+
+  .timeline-right-btn {
+    right: 0;
+  }
+
+  .left-triangle,
+  .right-triangle {
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-right: 12px solid #dbdbdb;
+  }
+
+  .right-triangle {
+    border-left: 12px solid #dbdbdb;
+    border-right: none;
+  }
+}
+
+.timeline-list {
+  width: $timeline-list-width;
+  @include transition(transform 0.25s $timing-function);
+  @include clearfix;
+
+  .timeline-item-wrapper {
+    float: left;
+    width: $timeline-item-width;
+    padding: $timeline-list-padding 0;
+    height: $timeline-height;
+
+    &.active {
+      .timeline-item {
+        color: $color-orange-red;
+        background-color: $color-lighter-gray;
+      }
+    }
+  }
+}
+
+.timeline-item {
+  padding-top: 2px;
+  width: 100%;
+  height: 100%;
+  font-size: $font-size-small;
+  text-align: center;
+
+  p {
+    line-height: $line-height-small;
+  }
+}
+
+// Time list
+// --------------------------------------------------
+.appoint-time {
+  height: $appoint-time-list-height;
+  .col {
+    text-align: center;
+    @include text-overflow
+  }
+
+  .appoint-time-head {
+    background-color: $color-lighter-gray;
+  }
+
+  .appoint-time-content {
+    overflow: hidden;
+  }
+
+  .appoint-time-list {
+    width: $appoint-time-list-width;
+    @include transition(transform 0.25s $timing-function);
+    @include clearfix;
+  }
+
+  .appoint-day-time {
+    float: left;
+    width: $appoint-day-time-width;
+  }
+
+  .appoint-time-item {
+    color: $color-gray;
+    background: url("../images/common/checkbox-uncheck.png") 10px center no-repeat;
+    background-size: 13px;
+    border-bottom: $border-default;
+
+    &:nth-child(4) {
+      border-bottom: none;
+    }
+
+    &.selected {
+      color: $color-dark-gray;
+      background-image: url("../images/common/checkbox-checked.png");
+    }
+
+    &:active {
+      background-color: darken($color-white, 5%);
+    }
+  }
+}
+
+// --------------------------------------------------
+// Coupon
+// --------------------------------------------------
+.coupon-modal {
+
+  .coupon {
+    margin-top: $coupon-gutter;
+    border: $border-default;
+
+    &:active {
+      background-color: darken($color-white, 5%);
+    }
+
+    &.active {
+      border-color: $color-orange-red;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .col {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        font-size: $font-size-small;
+      }
+
+      &:nth-child(2) {
+        color: $color-orange-red;
+
+        span {
+          font-size: $font-size-large;
+          font-weight: $font-weight-heavier;
+        }
+      }
+
+      &:nth-child(4) {
+        color: $color-gray;
+      }
+    }
+  }
+}
+
+.coupon-list {
+  height: $coupon-list-height;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// --------------------------------------------------
+// Order pay
+// --------------------------------------------------
+.pay-order-info {
+  padding: 0 $grid-gutter-base;
+
+  .row {
+    border-top: $border-default;
+
+    &:first-child {
+      font-weight: $font-weight-heavier;
+      border-top: none;
+    }
+  }
+}
+
+.pay-countdown {
+  font-size: $font-size-small;
+  text-align: center;
+}
+
+.pay-countdown-text {
+  vertical-align: middle;
+}
+
+.payment {
+  padding: 0 $grid-gutter-base;
+  margin-top: 100px;
+}
+
+// --------------------------------------------------
+// Order list page
+// --------------------------------------------------
+.order-type {
+  height: $order-list-type-height;
+  line-height: $order-list-type-height;
+
+  &:active {
+    color: $color-orange-red;
+    background-color: darken($color-white, 5%);
+  }
+
+  &.active {
+    color: $color-orange-red;
+    border-bottom: 2px solid $color-orange-red;
+  }
+}
+
+.order {
+  padding: 0 $grid-gutter-base;
+  margin-top: $grid-gutter-base;
+  background-color: $color-white;
+  border: $border-default;
+  border-radius: $border-radius-base;
+
+  .order-number,
+  .order-submit-time {
+    color: $color-gray;
+  }
+
+  .order-header,
+  .order-content {
+    border-bottom: $border-default;
+  }
+
+  .order-content {
+    padding: $grid-gutter-base 0;
+  }
+
+  .btn {
+    margin-left: $grid-gutter-base;
+  }
+}
+
+// --------------------------------------------------
+// Reservation page
+// --------------------------------------------------
+.reservation-list {
+  .reservation-item {
+    padding-left: $appoint-item-col-padding;
+    background: url("../images/common/checkbox-hollow-uncheck.png") left center no-repeat;
+    background-size: 18px;
+
+    &.selected {
+      background-image: url("../images/common/checkbox-hollow-checked.png");
+    }
+
+    &:active {
+      background-color: darken($color-white, 5%);
+    }
+  }
+}
+
+.car-condition-report {
+  margin: 0 $grid-gutter-base;
+  height: $car-condition-report-height;
+  border-bottom: $border-default;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+}
+
+.appointment-content {
+  .list-link-view {
+    li {
+      margin-top: $grid-gutter-base;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        .link-list-item {
+          border-bottom: $border-default;
+        }
+      }
+    }
+
+    .link-list-item {
+      height: $appoint-link-list-item-height;
+    }
+
+    .link-list-title {
+      color: $color-gray;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Select consultant.
+// --------------------------------------------------
+.consultant-content {
+  .select-icon {
+    display: none;
+  }
+  .link-list-item.selected {
+    .select-icon {
+      display: inline;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Reservation detail page
+// --------------------------------------------------
+.reservation {
+  padding: 0 $grid-gutter-base;
+  margin-top: $grid-gutter-base;
+  background-color: #fff;
+  border-radius: $border-radius-base;
+}
+
+.reservation-header {
+  color: $color-gray;
+  border-bottom: $border-default;
+}
+
+.reservation-body {
+  padding: $grid-gutter-base 0;
+  border-bottom: $border-default;
+}
+
+// --------------------------------------------------
+// Add car page
+// --------------------------------------------------
+.add-car-form {
+  margin: $grid-gutter-base 0;
+  background-color: $color-white;
+  border: $border-default;
+  border-radius: $border-radius-base;
+
+  .form-input,
+  .province-select {
+    vertical-align: middle;
+  }
+}
+
+// --------------------------------------------------
+// Coupon
+// --------------------------------------------------
+.coupon {
+  margin-top: $grid-gutter-large;
+  color: $color-orange-red;
+  background: url("../images/coupon/coupon-bg.png") right center no-repeat;
+  background-size: 223px 111px;
+  border: {
+    top: 5px solid $color-orange-red;
+    bottom: 5px solid $color-orange-red;
+  };
+  border-radius: $border-radius-large;
+
+  &.disabled {
+    color: $color-gray;
+    border: {
+      top: 5px solid $color-gray;
+      bottom: 5px solid $color-gray;
+    };
+  }
+}
+
+.coupon-content {
+  border: {
+    left: $border-default;
+    right: $border-default;
+  };
+}
+
+.expiry-date {
+  color: $color-gray;
+  border-top: $border-default;
+}
